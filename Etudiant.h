@@ -1,7 +1,10 @@
-#include <string>
-
 #ifndef ETUDIANT_H_
 #define ETUDIANT_H_
+
+#include <string>
+#include <iostream>
+
+using namespace std;
 
 class Etudiant
 {
@@ -19,7 +22,7 @@ public:
 	void setNom(const string& nom);
 
 	//Affichage des informations de l'étudiant
-	void afficher() const;
+	void afficher();
 
 private:
 	string matricule_, prenom_, nom_;
