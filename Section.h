@@ -34,7 +34,7 @@ private:
 	string sigleCours_, local_, titreCours_;
 	Professeur* professeur_;
 	Etudiant etudiant_[MAX_SECTIONS]; // Vérifier notation pointeurs des tableaux //TODO: On assume 75 étudiants max automatiquement?
-	unsigned int nombreEtudiants; //J'aurais écris nombreEtudiant_ par conventions, mais les instructions spécifient autrement
+	unsigned int nombreEtudiants_; //J'aurais écris nombreEtudiant_ par conventions, mais les instructions spécifient autrement
 };
 
 #endif
