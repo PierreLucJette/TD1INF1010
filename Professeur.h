@@ -20,7 +20,7 @@ public:
 	void setNom(const string& nom);
 	void setDepartement(const string& departement);
 
-	void afficher() const;
+	void afficher();
 
 private:
 	string numeroEmploye_, prenom_, nom_, departement_;

@@ -28,7 +28,7 @@ public:
 	bool ajouterEtudiant(const Etudiant& etudiant);
 	//TODO: Vérifier avec le chargé si un supprimerEtudiant est necessaire
 
-	void afficher() const;
+	void afficher();
 
 private:
 	string sigleCours_, local_, titreCours_;
