@@ -76,15 +76,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\Ecole.h" />
+    <ClInclude Include="Ecole.h" />
     <ClInclude Include="Etudiant.h" />
+    <ClInclude Include="Header.h" />
     <ClInclude Include="Professeur.h" />
     <ClInclude Include="Section.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\main.cpp" />
     <ClCompile Include="Ecole.cpp" />
     <ClCompile Include="Etudiant.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="Professeur.cpp" />
     <ClCompile Include="Section.cpp" />
   </ItemGroup>

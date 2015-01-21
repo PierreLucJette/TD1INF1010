@@ -1,4 +1,4 @@
-#include <string<
+#include <string>
 
 #ifndef PROFESSEUR_H_
 #define PROFESSEUR_H_

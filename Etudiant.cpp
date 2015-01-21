@@ -4,6 +4,7 @@
 #include "Etudiant.h"
 
 #include <iostream>
+#include <string>
 
 Etudiant::Etudiant(){
 	matricule_ = "";
