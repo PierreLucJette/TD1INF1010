@@ -17,12 +17,12 @@ Section::Section(){
 	nombreEtudiants_ = 0;
 }
 
-Section::Section(const string& sigleCours, const string& local, const string& titreCours, const Professeur& professeur, const Etudiant etudiant[], const unsigned int& nombreEtudiant){ //TODO: Vérifier const Etudiant etudiant
+Section::Section(const string& sigleCours, const string& local, const string& titreCours, const Professeur& professeur){ //TODO: Vérifier const Etudiant etudiant
 	sigleCours_ = sigleCours;
 	local_ = local;
 	titreCours_ = titreCours;
-	etudiant_[MAX_SECTIONS] = etudiant[MAX_SECTIONS]; //TODO: Louche
-	nombreEtudiants_ = nombreEtudiant;
+	etudiant_[MAX_SECTIONS] = {};
+	nombreEtudiants_ = 0; //La section est vide par défault
 }
 
 Section::Section(){}

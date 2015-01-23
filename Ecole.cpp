@@ -60,14 +60,14 @@ bool Ecole::ajouterSection(Section* section){
 bool Ecole::supprimerSection(const string& sigle, const string& local){ // En assumant que la combinaison sigle/local est unique
 	bool estPresente = false;
 	unsigned int marqueur = 0;
-	for (unsigned int i = 0; i < nombreSections_; i++){ //Scénario 12/26
+	for (unsigned int i = 0; i < nombreSections_; i++){ // On flag la position de la section à supprimer dans le tableau de sections et on la supprime.
 		if (sections_[i]->getSigleCours() == sigle && sections_[i]->getLocal() == local){
 			estPresente = true;
 			sections_[i] = {};
 			marqueur = i;
 		}
 	}
-	if (estPresente){
+	if (estPresente){ // Si notre flag == true, on décale les sections après celle supprimée pour boucher le trou.
 		--nombreSections_;
 		for (int i = marqueur; i < nombreSections_; i++){
 			sections_[i] = sections_[i + 1];

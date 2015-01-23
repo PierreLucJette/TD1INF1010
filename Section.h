@@ -9,7 +9,7 @@ class Section
 {
 public:
 	Section();
-	Section(const string& sigleCours, const string& local, const string& titreCours, const Professeur& professeur, const Etudiant etudiant[], const unsigned int& nombreEtudiant);
+	Section(const string& sigleCours, const string& local, const string& titreCours, const Professeur& professeur);
 	~Section();
 
 	string getSigleCours() const;
