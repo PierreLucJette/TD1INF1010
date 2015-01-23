@@ -142,7 +142,7 @@ int main()
 	cout << "Ajout de la section INF1010 et LOG4420 à l'École Polytechnique" << endl;
 	cout << "===============================================" << endl;
 	Poly.ajouterSection(&INF1010);
-	Poly.ajouterSection(&LOG4420);
+	Poly.ajouterSection(LOG4420);
 
 	// 19) Ajouter le cours ISF1000 à l'UQAM.
 	cout << endl << "===============================================" << endl;
@@ -169,9 +169,9 @@ int main()
 	Uqam->afficher();
 
 	// 24) Libérer la mémoire
-	~Poly; //TODO: Vérifier que le de delete l'école delete aussi toutes ses sections et etc.
-	~Uqam;
+	Poly.~Ecole(); //TODO: Vérifier que le de delete l'école delete aussi toutes ses sections et etc.
+	Uqam->~Ecole();
 
-	cout << endl;
+	cout << "Tout fonctionne!" << endl; //TODO: Delete "" when over.
 	return 0;
 }

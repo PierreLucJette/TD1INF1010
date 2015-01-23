@@ -60,7 +60,7 @@ void Section::setTitreCours(const string& titreCours){
 }
 
 void Section::setProfesseur(const Professeur& professeur){
-	professeur_ = *professeur; //: WWJD?
+	*professeur_ = professeur;
 }
 
 void Section::setNombreEtudiants(const unsigned int& nombreEtudiants){

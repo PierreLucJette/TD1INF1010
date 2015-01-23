@@ -24,9 +24,6 @@
     <ClInclude Include="Section.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Header.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Ecole.h">
       <Filter>Header Files</Filter>
     </ClInclude>

@@ -1,0 +1,169 @@
+﻿Build started 2015-01-23 14:37:09.
+     1>Project "C:\Users\PLJ\Desktop\Visual Studio Projects\TD1INF1010\TD1INF1010\TD1INF1010.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Ecole.cpp Etudiant.cpp main.cpp Professeur.cpp Section.cpp
+         Section.cpp
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\ecole.h(31): error C2061: syntax error : identifier 'Section'
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\ecole.h(40): error C2143: syntax error : missing ';' before '*'
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\ecole.h(40): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(6): error C2370: 'MAX_SECTIONS' : redefinition; different storage class
+                 c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\ecole.h(10) : see declaration of 'MAX_SECTIONS'
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(12): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(12): error C2143: syntax error : missing ',' before '&'
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(18): error C2146: syntax error : missing ';' before identifier 'getProfesseur'
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(18): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(18): warning C4183: 'getProfesseur': missing return type; assumed to be a member function returning 'int'
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(24): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(24): error C2143: syntax error : missing ',' before '&'
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(27): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(27): error C2143: syntax error : missing ',' before '&'
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(33): error C2143: syntax error : missing ';' before '*'
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(33): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(34): error C2146: syntax error : missing ';' before identifier 'etudiant_'
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(34): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.cpp(15): error C2065: 'professeur_' : undeclared identifier
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.cpp(16): error C2065: 'etudiant_' : undeclared identifier
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.cpp(20): error C2511: 'Section::Section(const std::string &,const std::string &,const std::string &,const Professeur &)' : overloaded member function not found in 'Section'
+                 c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(9) : see declaration of 'Section'
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.cpp(21): error C2597: illegal reference to non-static member 'Section::sigleCours_'
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.cpp(22): error C2597: illegal reference to non-static member 'Section::local_'
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.cpp(23): error C2597: illegal reference to non-static member 'Section::titreCours_'
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.cpp(24): error C2065: 'etudiant_' : undeclared identifier
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.cpp(25): error C2597: illegal reference to non-static member 'Section::nombreEtudiants_'
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.cpp(28): error C2084: function 'Section::Section(void)' already has a body
+                 c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(11) : see previous definition of '{ctor}'
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.cpp(42): error C2556: 'Professeur Section::getProfesseur(void) const' : overloaded function differs only by return type from 'int Section::getProfesseur(void) const'
+                 c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(18) : see declaration of 'Section::getProfesseur'
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.cpp(42): error C2371: 'Section::getProfesseur' : redefinition; different basic types
+                 c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(18) : see declaration of 'Section::getProfesseur'
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.cpp(43): error C2065: 'professeur_' : undeclared identifier
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.cpp(62): error C2511: 'void Section::setProfesseur(const Professeur &)' : overloaded member function not found in 'Section'
+                 c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(9) : see declaration of 'Section'
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.cpp(63): error C2065: 'professeur_' : undeclared identifier
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.cpp(70): error C2511: 'bool Section::ajouterEtudiant(const Etudiant &)' : overloaded member function not found in 'Section'
+                 c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(9) : see declaration of 'Section'
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.cpp(71): error C2065: 'etudiant_' : undeclared identifier
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.cpp(71): error C2597: illegal reference to non-static member 'Section::nombreEtudiants_'
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.cpp(71): error C3867: 'Section::nombreEtudiants_': function call missing argument list; use '&Section::nombreEtudiants_' to create a pointer to member
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.cpp(71): error C2568: '[' : unable to resolve function overload
+                 unable to recover from previous error(s); stopping compilation
+         Professeur.cpp
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\ecole.h(31): error C2061: syntax error : identifier 'Section'
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\ecole.h(40): error C2143: syntax error : missing ';' before '*'
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\ecole.h(40): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(6): error C2370: 'MAX_SECTIONS' : redefinition; different storage class
+                 c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\ecole.h(10) : see declaration of 'MAX_SECTIONS'
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(12): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(12): error C2143: syntax error : missing ',' before '&'
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(18): error C2146: syntax error : missing ';' before identifier 'getProfesseur'
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(18): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(18): warning C4183: 'getProfesseur': missing return type; assumed to be a member function returning 'int'
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(24): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(24): error C2143: syntax error : missing ',' before '&'
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(27): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(27): error C2143: syntax error : missing ',' before '&'
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(33): error C2143: syntax error : missing ';' before '*'
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(33): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(34): error C2146: syntax error : missing ';' before identifier 'etudiant_'
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(34): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\professeur.cpp(25): error C2084: function 'Professeur::Professeur(void)' already has a body
+                 c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\professeur.h(9) : see previous definition of '{ctor}'
+         main.cpp
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\ecole.h(31): error C2061: syntax error : identifier 'Section'
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\ecole.h(40): error C2143: syntax error : missing ';' before '*'
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\ecole.h(40): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(6): error C2370: 'MAX_SECTIONS' : redefinition; different storage class
+                 c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\ecole.h(10) : see declaration of 'MAX_SECTIONS'
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(12): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(12): error C2143: syntax error : missing ',' before '&'
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(18): error C2146: syntax error : missing ';' before identifier 'getProfesseur'
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(18): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(18): warning C4183: 'getProfesseur': missing return type; assumed to be a member function returning 'int'
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(24): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(24): error C2143: syntax error : missing ',' before '&'
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(27): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(27): error C2143: syntax error : missing ',' before '&'
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(33): error C2143: syntax error : missing ';' before '*'
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(33): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(34): error C2146: syntax error : missing ';' before identifier 'etudiant_'
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(34): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\main.cpp(98): error C2664: 'Section::Section(const Section &)' : cannot convert argument 4 from 'Professeur' to 'const int'
+                 No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\main.cpp(101): error C2664: 'bool Section::ajouterEtudiant(const int)' : cannot convert argument 1 from 'Etudiant' to 'const int'
+                 No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\main.cpp(109): error C2664: 'Section::Section(const Section &)' : cannot convert argument 4 from 'Professeur' to 'const int'
+                 No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\main.cpp(112): error C2664: 'bool Section::ajouterEtudiant(const int)' : cannot convert argument 1 from 'Etudiant' to 'const int'
+                 No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\main.cpp(113): error C2664: 'bool Section::ajouterEtudiant(const int)' : cannot convert argument 1 from 'Etudiant' to 'const int'
+                 No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\main.cpp(121): error C2664: 'Section::Section(const Section &)' : cannot convert argument 4 from 'Professeur' to 'const int'
+                 No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\main.cpp(124): error C2664: 'bool Section::ajouterEtudiant(const int)' : cannot convert argument 1 from 'Etudiant' to 'const int'
+                 No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\main.cpp(125): error C2664: 'bool Section::ajouterEtudiant(const int)' : cannot convert argument 1 from 'Etudiant' to 'const int'
+                 No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\main.cpp(133): error C2664: 'Section::Section(const Section &)' : cannot convert argument 4 from 'Professeur' to 'const int'
+                 No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\main.cpp(136): error C2664: 'bool Section::ajouterEtudiant(const int)' : cannot convert argument 1 from 'Etudiant' to 'const int'
+                 No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\main.cpp(137): error C2664: 'bool Section::ajouterEtudiant(const int)' : cannot convert argument 1 from 'Etudiant' to 'const int'
+                 No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\main.cpp(138): error C2664: 'bool Section::ajouterEtudiant(const int)' : cannot convert argument 1 from 'Etudiant' to 'const int'
+                 No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\main.cpp(144): error C2660: 'Ecole::ajouterSection' : function does not take 1 arguments
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\main.cpp(145): error C2660: 'Ecole::ajouterSection' : function does not take 1 arguments
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\main.cpp(151): error C2660: 'Ecole::ajouterSection' : function does not take 1 arguments
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\main.cpp(159): error C2660: 'Ecole::ajouterSection' : function does not take 1 arguments
+         Etudiant.cpp
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\ecole.h(31): error C2061: syntax error : identifier 'Section'
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\ecole.h(40): error C2143: syntax error : missing ';' before '*'
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\ecole.h(40): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(6): error C2370: 'MAX_SECTIONS' : redefinition; different storage class
+                 c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\ecole.h(10) : see declaration of 'MAX_SECTIONS'
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(12): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(12): error C2143: syntax error : missing ',' before '&'
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(18): error C2146: syntax error : missing ';' before identifier 'getProfesseur'
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(18): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(18): warning C4183: 'getProfesseur': missing return type; assumed to be a member function returning 'int'
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(24): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(24): error C2143: syntax error : missing ',' before '&'
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(27): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(27): error C2143: syntax error : missing ',' before '&'
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(33): error C2143: syntax error : missing ';' before '*'
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(33): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(34): error C2146: syntax error : missing ';' before identifier 'etudiant_'
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(34): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+         Ecole.cpp
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\ecole.h(31): error C2061: syntax error : identifier 'Section'
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\ecole.h(40): error C2143: syntax error : missing ';' before '*'
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\ecole.h(40): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(6): error C2370: 'MAX_SECTIONS' : redefinition; different storage class
+                 c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\ecole.h(10) : see declaration of 'MAX_SECTIONS'
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(12): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(12): error C2143: syntax error : missing ',' before '&'
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(18): error C2146: syntax error : missing ';' before identifier 'getProfesseur'
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(18): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(18): warning C4183: 'getProfesseur': missing return type; assumed to be a member function returning 'int'
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(24): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(24): error C2143: syntax error : missing ',' before '&'
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(27): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(27): error C2143: syntax error : missing ',' before '&'
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(33): error C2143: syntax error : missing ';' before '*'
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(33): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(34): error C2146: syntax error : missing ';' before identifier 'etudiant_'
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\section.h(34): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\ecole.cpp(15): error C2065: 'sections_' : undeclared identifier
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\ecole.cpp(22): error C2065: 'sections_' : undeclared identifier
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\ecole.cpp(47): error C2511: 'bool Ecole::ajouterSection(Section *)' : overloaded member function not found in 'Ecole'
+                 c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\ecole.h(16) : see declaration of 'Ecole'
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\ecole.cpp(49): error C2597: illegal reference to non-static member 'Ecole::nombreSections_'
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\ecole.cpp(49): error C3867: 'Ecole::nombreSections_': function call missing argument list; use '&Ecole::nombreSections_' to create a pointer to member
+     1>c:\users\plj\desktop\visual studio projects\td1inf1010\td1inf1010\ecole.cpp(49): error C2568: '<' : unable to resolve function overload
+                 unable to recover from previous error(s); stopping compilation
+         Generating Code...
+     1>Done Building Project "C:\Users\PLJ\Desktop\Visual Studio Projects\TD1INF1010\TD1INF1010\TD1INF1010.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:03.31
