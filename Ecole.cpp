@@ -47,7 +47,7 @@ void Ecole::setAdresse(const string& adresse){
 bool Ecole::ajouterSection(Section* section){
 	bool estPresente = false;
 	if (nombreSections_ < 50){
-		for (int i = 0; i < nombreSections_; i++){
+		for (unsigned int i = 0; i < nombreSections_; i++){
 				if (sections_[i] == section)
 					estPresente = true;
 		}
@@ -72,7 +72,7 @@ bool Ecole::supprimerSection(const string& sigle, const string& local){ // En as
 	}
 	if (estPresente){ // Si notre flag == true, on décale les sections après celle supprimée pour boucher le trou.
 		--nombreSections_;
-		for (int i = marqueur; i < nombreSections_; i++){
+		for (unsigned int i = marqueur; i < nombreSections_; i++){
 			sections_[i] = sections_[i + 1];
 		}
 	}
@@ -81,9 +81,9 @@ bool Ecole::supprimerSection(const string& sigle, const string& local){ // En as
 
 void Ecole::afficher(){
 	cout << "Nom de l'ecole: " << nom_ << endl << "Adresse: " << adresse_ << endl << "Nombre de sections: " << nombreSections_ << endl;
-	for (int i = 0; i < nombreSections_; i++){
+	for (unsigned int i = 0; i < nombreSections_; i++){
 		cout << "Section numero " << i << endl;
-		sections_[i]->afficher;
+		sections_[i]->afficher();
 	}
 }
 

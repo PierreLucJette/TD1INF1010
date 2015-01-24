@@ -22,7 +22,7 @@ Professeur::Professeur(const string& numeroEmploye, const string& prenom, const 
 	departement_ = departement;
 }
 
-Professeur::Professeur(){}
+Professeur::~Professeur(){}
 
 string Professeur::getNumeroEmploye() const{
 	return numeroEmploye_;

@@ -1,34 +1,17 @@
-﻿Build started 2015-01-23 19:07:16.
+﻿Build started 2015-01-23 21:44:25.
      1>Project "C:\Users\Pierre-Luc\Desktop\TD1INF1010\TD1INF1010.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         E:\Programmes\Visual Studio Ultimate 2013\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Ecole.cpp Etudiant.cpp Professeur.cpp Section.cpp main.cpp
-         main.cpp
-     1>c:\users\pierre-luc\desktop\td1inf1010\ecole.h(11): error C2370: 'MAX_SECTIONS' : redefinition; different storage class
-                 c:\users\pierre-luc\desktop\td1inf1010\section.h(8) : see declaration of 'MAX_SECTIONS'
+         E:\Programmes\Visual Studio Ultimate 2013\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Section.cpp
          Section.cpp
-     1>c:\users\pierre-luc\desktop\td1inf1010\ecole.h(11): error C2370: 'MAX_SECTIONS' : redefinition; different storage class
-                 c:\users\pierre-luc\desktop\td1inf1010\section.h(8) : see declaration of 'MAX_SECTIONS'
-     1>c:\users\pierre-luc\desktop\td1inf1010\section.cpp(28): error C2084: function 'Section::Section(void)' already has a body
-                 c:\users\pierre-luc\desktop\td1inf1010\section.h(13) : see previous definition of '{ctor}'
-     1>c:\users\pierre-luc\desktop\td1inf1010\section.cpp(77): error C3867: 'Professeur::afficher': function call missing argument list; use '&Professeur::afficher' to create a pointer to member
-         Professeur.cpp
-     1>c:\users\pierre-luc\desktop\td1inf1010\ecole.h(11): error C2370: 'MAX_SECTIONS' : redefinition; different storage class
-                 c:\users\pierre-luc\desktop\td1inf1010\section.h(8) : see declaration of 'MAX_SECTIONS'
-     1>c:\users\pierre-luc\desktop\td1inf1010\professeur.cpp(25): error C2084: function 'Professeur::Professeur(void)' already has a body
-                 c:\users\pierre-luc\desktop\td1inf1010\professeur.h(11) : see previous definition of '{ctor}'
-         Etudiant.cpp
-     1>c:\users\pierre-luc\desktop\td1inf1010\ecole.h(11): error C2370: 'MAX_SECTIONS' : redefinition; different storage class
-                 c:\users\pierre-luc\desktop\td1inf1010\section.h(8) : see declaration of 'MAX_SECTIONS'
-         Ecole.cpp
-     1>c:\users\pierre-luc\desktop\td1inf1010\ecole.h(11): error C2370: 'MAX_SECTIONS' : redefinition; different storage class
-                 c:\users\pierre-luc\desktop\td1inf1010\section.h(8) : see declaration of 'MAX_SECTIONS'
-     1>c:\users\pierre-luc\desktop\td1inf1010\ecole.cpp(50): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\pierre-luc\desktop\td1inf1010\ecole.cpp(75): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\pierre-luc\desktop\td1inf1010\ecole.cpp(84): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\pierre-luc\desktop\td1inf1010\ecole.cpp(86): error C3867: 'Section::afficher': function call missing argument list; use '&Section::afficher' to create a pointer to member
-         Generating Code...
-     1>Done Building Project "C:\Users\Pierre-Luc\Desktop\TD1INF1010\TD1INF1010.vcxproj" (Build target(s)) -- FAILED.
+       Link:
+         E:\Programmes\Visual Studio Ultimate 2013\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Pierre-Luc\Desktop\TD1INF1010\Debug\TD1INF1010.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Pierre-Luc\Desktop\TD1INF1010\Debug\TD1INF1010.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Pierre-Luc\Desktop\TD1INF1010\Debug\TD1INF1010.lib" /MACHINE:X86 Debug\Ecole.obj
+         Debug\Etudiant.obj
+         Debug\main.obj
+         Debug\Professeur.obj
+         Debug\Section.obj
+         TD1INF1010.vcxproj -> C:\Users\Pierre-Luc\Desktop\TD1INF1010\Debug\TD1INF1010.exe
+     1>Done Building Project "C:\Users\Pierre-Luc\Desktop\TD1INF1010\TD1INF1010.vcxproj" (Build target(s)).
 
-Build FAILED.
+Build succeeded.
 
-Time Elapsed 00:00:01.17
+Time Elapsed 00:00:01.24

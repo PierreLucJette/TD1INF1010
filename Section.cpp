@@ -13,7 +13,7 @@ Section::Section(){
 	local_ = "";
 	titreCours_ = "";
 	professeur_ = new Professeur();
-	etudiant_[MAX_SECTIONS] = {};
+	etudiant_[MAXIMUM_SECTIONS] = {};
 	nombreEtudiants_ = 0;
 }
 
@@ -21,11 +21,11 @@ Section::Section(const string& sigleCours, const string& local, const string& ti
 	sigleCours_ = sigleCours;
 	local_ = local;
 	titreCours_ = titreCours;
-	etudiant_[MAX_SECTIONS] = {};
+	etudiant_[MAXIMUM_SECTIONS] = {};
 	nombreEtudiants_ = 0; //La section est vide par défault
 }
 
-Section::Section(){}
+Section::~Section(){}
 
 string Section::getSigleCours() const{
 	return sigleCours_;
@@ -67,15 +67,22 @@ void Section::setNombreEtudiants(const unsigned int& nombreEtudiants){
 	nombreEtudiants_ = nombreEtudiants;
 }
 
-bool Section::ajouterEtudiant(const Etudiant& etudiant){
+bool Section::ajouterEtudiant(Etudiant& etudiant){
+	bool bienAjoute = true, dejaPresent = false;
+	for (unsigned int i = 0; i < nombreEtudiants_; i++){
+		if (etudiant_[i].getMatricule() == etudiant.getMatricule())
+			dejaPresent = true;
+	}
+	if (nombreEtudiants_ < 75 && dejaPresent == false)
 	etudiant_[nombreEtudiants_] = etudiant;
 	++nombreEtudiants_;
+	return dejaPresent;
 }
 
 void Section::afficher(){
 	cout << "Sigle de cours: " << sigleCours_ << endl << "Local: " << local_ << endl << "Titre du cours: " << titreCours_ << endl;
-	professeur_->afficher;
-	for (int i = 0; i < MAX_SECTIONS; i++){
+	professeur_->afficher();
+	for (int i = 0; i < MAXIMUM_SECTIONS; i++){
 		cout << "Etudiant numero " << i << endl;
 		etudiant_[i].afficher();
 	}
