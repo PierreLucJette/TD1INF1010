@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include "Section.h"
 
 using namespace std;
 

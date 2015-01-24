@@ -46,14 +46,17 @@ void Ecole::setAdresse(const string& adresse){
 
 bool Ecole::ajouterSection(Section* section){
 	bool estPresente = false;
-	for (int i = 0; i < nombreSections_; i++){
-		if (sections_[i] == section)
-			estPresente = true;
+	if (nombreSections_ < 50){
+		for (int i = 0; i < nombreSections_; i++){
+				if (sections_[i] == section)
+					estPresente = true;
+		}
+		if (estPresente){
+			sections_[nombreSections_] = section;
+			++nombreSections_;
+		}
 	}
-	if (estPresente){
-		sections_[nombreSections_] = section;
-		++nombreSections_;
-	}
+	
 	return estPresente;
 }
 

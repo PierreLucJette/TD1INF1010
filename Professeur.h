@@ -1,7 +1,9 @@
-#include <string>
-
 #ifndef PROFESSEUR_H_
 #define PROFESSEUR_H_
+
+#include <string>
+
+using namespace std;
 
 class Professeur
 {

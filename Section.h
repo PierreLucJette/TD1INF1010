@@ -2,6 +2,8 @@
 #define SECTION_H_
 
 #include <string>
+#include "Professeur.h"
+#include "Etudiant.h"
 
 const int MAX_SECTIONS = 75;
 
