@@ -7,7 +7,6 @@ Description:
 	Fichier contenant la description de la classe Ecole.
 ********************************************************************/
 
-
 #ifndef ECOLE_H
 #define ECOLE_H
 
@@ -26,6 +25,7 @@ Cette classe représente un modèle simplifié d'une école.
 class Ecole
 {
 public:
+	//constructeurs
 	Ecole();
 	Ecole(const string& nom, const string& adresse);
 	~Ecole();
@@ -42,6 +42,7 @@ public:
 	bool ajouterSection(Section* section);
 	bool supprimerSection(const string& sigle, const string& local);
 
+	//affichage
 	void afficher();
 
 private:

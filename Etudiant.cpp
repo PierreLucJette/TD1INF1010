@@ -54,5 +54,5 @@ void Etudiant::setNom(const string& nom){
 }
 
 void Etudiant::afficher(){
-	cout << "Matricule: " << matricule_ << endl << "Prenom: " << prenom_ << endl << "Nom: " << nom_ << endl;
+	cout << "Matricule: " << matricule_ << endl << "Prenom: " << prenom_ << endl << "Nom: " << nom_ << "\n\n\n";
 }

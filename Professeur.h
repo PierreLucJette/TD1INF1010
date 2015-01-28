@@ -18,20 +18,26 @@ using namespace std;
 class Professeur
 {
 public:
+	//constructeurs
 	Professeur();
 	Professeur(const string& numeroEmploye, const string& prenom, const string& nom, const string& departement);
+
+	//destructeur
 	~Professeur();
 
+	//acccesseurs
 	string getNumeroEmploye() const;
 	string getPrenom() const;
 	string getNom() const;
 	string getDepartement() const;
 
+	//mutateurs
 	void setNumeroEmploye(const string& numeroEmploye);
 	void setPrenom(const string& prenom);
 	void setNom(const string& nom);
 	void setDepartement(const string& departement);
 
+	//affichage
 	void afficher();
 
 private:

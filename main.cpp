@@ -165,7 +165,7 @@ int main()
 	// 22) Supprimer le cours ISF2000 de l'UQAM
 	cout << endl << "===============================================" << endl;
 	cout << "On supprime la section ISF2000 a l'UQAM" << endl;
-	cout << "===============================================" << endl;
+	cout << "===============================================" << "\n\n\n";
 	Uqam->supprimerSection(ISF2000->getSigleCours(), ISF2000->getLocal());
 
 	// 23) Afficher les deux écoles créées.
@@ -173,6 +173,7 @@ int main()
 	Uqam->afficher();
 
 	// 24) Libérer la mémoire
+	//TODO: AUGMENTER LISIBILITÉ DE L'AFFICHAGE
 	Poly.~Ecole();
 	Uqam->~Ecole();
 	return 0;

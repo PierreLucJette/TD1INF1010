@@ -87,11 +87,11 @@ void Section::setNombreEtudiants(const unsigned int& nombreEtudiants){
 
 bool Section::ajouterEtudiant(const Etudiant& etudiant){
 	bool bienAjoute = false , dejaPresent = false;
-	for (unsigned int i = 0; i < nombreEtudiants_; i++){
+	for (unsigned int i = 0; i < nombreEtudiants_; i++){ //On vérifie si l'étudiant est déjà présent en comparant son matricule à ceux du tableau
 		if (etudiant_[i]->getMatricule() == etudiant.getMatricule())
 			dejaPresent = true;
 	}
-	if (nombreEtudiants_ < MAXIMUM_SECTIONS && dejaPresent == false){
+	if (nombreEtudiants_ < MAXIMUM_SECTIONS && dejaPresent == false){ //S'il n'est pas présent et qu'il reste de la place dans la section, on l'ajoute dans la section et on incrémente le nombre de personnes dans la section
 		*etudiant_[nombreEtudiants_] = etudiant;
 		++nombreEtudiants_;
 		bienAjoute = true;
@@ -101,10 +101,10 @@ bool Section::ajouterEtudiant(const Etudiant& etudiant){
 
 void Section::afficher(){
 	cout << "Sigle de cours: " << sigleCours_ << endl << "Local: " << local_ << endl << "Titre du cours: " << titreCours_ << endl;
-	professeur_->afficher();
-	for (unsigned int i = 0; i < nombreEtudiants_; i++){
+	professeur_->afficher(); //L'objet professeur va appeler sa propre fonction afficher, similaire à celle-ci.
+	for (unsigned int i = 0; i < nombreEtudiants_; i++){ //On appele nombreEtudiants_ individuellement et on lui fait afficher ses informations avec une fonction afficher similaire à celle-ci.
 		cout << "Etudiant numero " << i + 1 << endl;
 		etudiant_[i]->afficher();
 	}
-	cout << "Nombre d'etudiants dans la section: " << nombreEtudiants_ << endl;
+	cout << "Nombre d'etudiants dans la section: " << nombreEtudiants_ << "\n\n\n";
 }

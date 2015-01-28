@@ -62,12 +62,13 @@ void Ecole::setAdresse(const string& adresse){
 
 bool Ecole::ajouterSection(Section* section){
 	bool estPresente = false;
-	if (nombreSections_ < 50){
+	if (nombreSections_ < MAX_SECTIONS){ // S'il reste de la place pour une nouvelle section dans l'école
 		for (unsigned int i = 0; i < nombreSections_; i++){
-			if ((sections_[i] == section) || sections_[i]->getLocal() == section->getLocal())// Ici, l'utilisation de estPresente nous sauve l'utilisation d'une nouvelle variable, localEstOccupe.
+			if ((sections_[i] == section) || sections_[i]->getLocal() == section->getLocal()) // Ici, l'utilisation de estPresente nous sauve l'utilisation d'une nouvelle variable, localEstOccupe.
+				// Si la section est déjà inscrite dans la liste ou si une autre section utilise le même local, on rejette l'ajout de la section.
 				estPresente = true;
 		}
-		if (estPresente == false){
+		if (estPresente == false){ //Si la section n'existe pas déjà et que le local est libre, on l'ajoute à la fin du tableau et on incrémente nombreSections_.
 			sections_[nombreSections_] = section;
 			++nombreSections_;
 		}
@@ -78,14 +79,14 @@ bool Ecole::ajouterSection(Section* section){
 bool Ecole::supprimerSection(const string& sigle, const string& local){ // En assumant que la combinaison sigle/local est unique
 	bool estPresente = false;
 	unsigned int marqueur = 0;
-	for (unsigned int i = 0; i < nombreSections_; i++){ // On flag la position de la section à supprimer dans le tableau de sections et on la supprime.
-		if (sections_[i]->getSigleCours() == sigle && sections_[i]->getLocal() == local){
+	for (unsigned int i = 0; i < nombreSections_; i++){
+		if (sections_[i]->getSigleCours() == sigle && sections_[i]->getLocal() == local){ // Si on trouve que la section existe dans notre tableau (en comparant le sigle de cours et le local), on marque la position avec un marqueur et on efface le pointeur sur cette position
 			estPresente = true;
-			sections_[i] = {};
+			sections_[i] = NULL;
 			marqueur = i;
 		}
 	}
-	if (estPresente){ // Si notre flag == true, on décale les sections après celle supprimée pour boucher le trou.
+	if (estPresente){ // Si estPresente, on décale toutes les sections après notre marquer pour combler le trou et on décrémente le nombre de sections.
 		--nombreSections_;
 		for (unsigned int i = marqueur; i < nombreSections_; i++){
 			sections_[i] = sections_[i + 1];
@@ -95,11 +96,12 @@ bool Ecole::supprimerSection(const string& sigle, const string& local){ // En as
 }
 
 void Ecole::afficher(){
-	cout << "Nom de l'ecole: " << nom_ << endl << "Adresse: " << adresse_ << endl << "Nombre de sections: " << nombreSections_ << endl;
+	cout << "Nom de l'ecole: " << nom_ << endl << "Adresse: " << adresse_ << endl << "Nombre de sections: " << nombreSections_ << "\n\n\n";
 	for (unsigned int i = 0; i < nombreSections_; i++){
 		cout << "Section numero " << i + 1 << endl;
 		sections_[i]->afficher();
 	}
+	cout << "\n\n\n===============================================\n\n\n";
 }
 
 

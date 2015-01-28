@@ -19,16 +19,21 @@ const int MAXIMUM_SECTIONS = 75; //Nombre maximum d'étudiants dans une section
 class Section
 {
 public:
+	//constructeurs
 	Section();
 	Section(const string& sigleCours, const string& local, const string& titreCours, Professeur& professeur);
+
+	//destructeur
 	~Section();
 
+	//accesseurs
 	string getSigleCours() const;
 	string getLocal() const;
 	string getTitreCours() const;
 	Professeur getProfesseur() const;
 	unsigned int getNombreEtudiants() const;
 
+	//mutateurs
 	void setSigleCours(const string& sigleCours);
 	void setLocal(const string& local);
 	void setTitreCours(const string& titreCours);
@@ -36,7 +41,8 @@ public:
 	void setNombreEtudiants(const unsigned int& nombreEtudiants);
 
 	bool ajouterEtudiant(const Etudiant& etudiant);
-
+	
+	//affichage
 	void afficher();
 
 private:

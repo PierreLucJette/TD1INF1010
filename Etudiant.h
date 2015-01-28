@@ -19,19 +19,24 @@ using namespace std;
 class Etudiant
 {
 public:
+	//constructeurs
 	Etudiant();
 	Etudiant(const string& matricule, const string& prenom, const string& nom);
+
+	//destructeurs
 	~Etudiant();
 
+	//accesseurs
 	string getMatricule() const;
 	string getPrenom() const;
 	string getNom() const;
 
+	//mutateurs
 	void setMatricule(const string& matricule);
 	void setPrenom(const string& prenom);
 	void setNom(const string& nom);
 
-	//Affichage des informations de l'étudiant
+	//affichage
 	void afficher();
 
 private:
