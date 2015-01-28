@@ -26,7 +26,10 @@ Ecole::Ecole(const string& nom, const string& adresse){ //L'utilisateur n'a jama
 	}
 }
 
-Ecole::~Ecole(){}
+Ecole::~Ecole(){
+	for (int i=0; i < nombreSections_; i++)
+		sections_[i]->~Section();
+}
 
 string Ecole::getNom() const{
 	return nom_;
@@ -52,7 +55,7 @@ bool Ecole::ajouterSection(Section* section){
 	bool estPresente = false;
 	if (nombreSections_ < 50){
 		for (unsigned int i = 0; i < nombreSections_; i++){
-			if (sections_[i] == section)
+			if ((sections_[i] == section) || sections_[i]->getLocal() == section->getLocal())// Ici, l'utilisation de estPresente nous sauve l'utilisation d'une nouvelle variable, localEstOccupe.
 				estPresente = true;
 		}
 		if (estPresente == false){
@@ -60,7 +63,6 @@ bool Ecole::ajouterSection(Section* section){
 			++nombreSections_;
 		}
 	}
-	
 	return estPresente;
 }
 

@@ -30,7 +30,11 @@ Section::Section(const string& sigleCours, const string& local, const string& ti
 	nombreEtudiants_ = 0; //La section est vide par défault
 }
 
-Section::~Section(){}
+Section::~Section(){
+	professeur_->~Professeur();
+	for (int i = 0; i < nombreEtudiants_; i++)
+		etudiant_[i]->~Etudiant();
+}
 
 string Section::getSigleCours() const{
 	return sigleCours_;

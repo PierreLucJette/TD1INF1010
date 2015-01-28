@@ -15,9 +15,7 @@
 using namespace std;
 
 int main()
-{
-	cout << "\a\a";
-	
+{	
 	// 1) Créer automatiquement un objet Ecole avec son constructeur par défaut
 	//    et modifier ses attributs :
 	//	  nom="École Polytechnique de Montréal"
@@ -171,7 +169,5 @@ int main()
 	// 24) Libérer la mémoire
 	Poly.~Ecole(); //TODO: Vérifier que le de delete l'école delete aussi toutes ses sections et etc.
 	Uqam->~Ecole();
-
-	cout << "Tout fonctionne!" << endl; //TODO: Delete "" when over.
 	return 0;
 }
