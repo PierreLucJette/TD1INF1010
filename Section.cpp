@@ -1,3 +1,12 @@
+/********************************************************************
+Fichier: Section.cpp
+Auteurs: Pierre-Luc Jetté && Claire Quesnel
+Date de création: 21 janvier 2015
+Dernière modification: 28 janvier 2015
+Description:
+	Fichier contenant l'implémentation de la classe Section.
+********************************************************************/
+
 #include "Ecole.h"
 #include "Section.h"
 #include "Professeur.h"
@@ -19,7 +28,7 @@ Section::Section(){
 	nombreEtudiants_ = 0;
 }
 
-Section::Section(const string& sigleCours, const string& local, const string& titreCours, Professeur& professeur){ //TODO: Vérifier const Etudiant etudiant
+Section::Section(const string& sigleCours, const string& local, const string& titreCours, Professeur& professeur){
 	sigleCours_ = sigleCours;
 	local_ = local;
 	titreCours_ = titreCours;

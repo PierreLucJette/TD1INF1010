@@ -1,3 +1,12 @@
+/********************************************************************
+Fichier: Section.h
+Auteurs: Pierre-Luc Jetté && Claire Quesnel
+Date de création: 21 janvier 2015
+Dernière modification: 28 janvier 2015
+Description:
+	Fichier contenant la description de la classe Section.
+********************************************************************/
+
 #ifndef SECTION_H_
 #define SECTION_H_
 
@@ -5,7 +14,7 @@
 #include "Professeur.h"
 #include "Etudiant.h"
 
-const int MAXIMUM_SECTIONS = 75;
+const int MAXIMUM_SECTIONS = 75; //Nombre maximum d'étudiants dans une section
 
 class Section
 {
@@ -33,7 +42,7 @@ public:
 private:
 	string sigleCours_, local_, titreCours_;
 	Professeur* professeur_;
-	Etudiant* etudiant_[MAXIMUM_SECTIONS]; // Vérifier notation pointeurs des tableaux //TODO: On assume 75 étudiants max automatiquement?
+	Etudiant* etudiant_[MAXIMUM_SECTIONS];
 	unsigned int nombreEtudiants_; //J'aurais écris nombreEtudiant_ par conventions, mais les instructions spécifient autrement
 };
 

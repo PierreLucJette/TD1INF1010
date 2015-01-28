@@ -1,3 +1,13 @@
+/********************************************************************
+Fichier: Etudiant.h
+Auteurs: Pierre-Luc Jetté && Claire Quesnel
+Date de création: 21 janvier 2015
+Dernière modification: 28 janvier 2015
+Description:
+	Fichier contenant la description de la classe Etudiant.
+********************************************************************/
+
+
 #ifndef ETUDIANT_H_
 #define ETUDIANT_H_
 

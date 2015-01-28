@@ -1,9 +1,15 @@
 /********************************************************************
- Fichier: main.cpp
- Auteur: Konstantinos Lambrou-Latreille
- Description: 
-	Fichier main qui contient l'exécution principale du TP1 de INF1010.
-	Bien lire les commentaires et coder les instructions.
+Fichier: main.cpp
+Auteurs: Pierre-Luc Jetté && Claire Quesnel
+Date de création: 21 janvier 2015
+Dernière modification: 28 janvier 2015
+Description: 
+	Fichier main qui contient l'exécution principale du TP1 - INF1010
+	Le programme crée une forme simplifiée d'une école, contenant des
+	sections, des professeurs et des étudiants. Le programme crée des 
+	objets génériques, effectue sur eux quelques modifications d'attributs
+	pour enfin afficher toutes les informations des objets crées à
+	l'utilisateur.
 ********************************************************************/
 
 #include <iostream>
@@ -21,7 +27,7 @@ int main()
 	//	  nom="École Polytechnique de Montréal"
 	//	  adresse="2900 Boulevard Edouard-Montpetit, Montréal, Québec H3T 1J4"
 	Ecole Poly;
-	Poly.setNom("Ecole Polytechnique de Montreal"); //TODO: Mettre en string first?
+	Poly.setNom("Ecole Polytechnique de Montreal");
 	Poly.setAdresse("2900 Boulevard Edouard-Montpetit, Montreal, Quebec, H3T 1J4");
 
 	// 2) Créer dynamiquement un objet Ecole avec son constructeur par paramètres
@@ -167,7 +173,7 @@ int main()
 	Uqam->afficher();
 
 	// 24) Libérer la mémoire
-	Poly.~Ecole(); //TODO: Vérifier que le de delete l'école delete aussi toutes ses sections et etc.
+	Poly.~Ecole();
 	Uqam->~Ecole();
 	return 0;
 }

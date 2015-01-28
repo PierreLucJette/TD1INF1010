@@ -1,3 +1,13 @@
+/********************************************************************
+Fichier: Professeur.h
+Auteurs: Pierre-Luc Jetté && Claire Quesnel
+Date de création: 21 janvier 2015
+Dernière modification: 28 janvier 2015
+Description:
+	Fichier contenant la description de la classe Professeur.
+********************************************************************/
+
+
 #ifndef PROFESSEUR_H_
 #define PROFESSEUR_H_
 

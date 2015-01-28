@@ -1,3 +1,12 @@
+/********************************************************************
+Fichier: Ecole.cpp
+Auteurs: Pierre-Luc Jetté && Claire Quesnel
+Date de création: 21 janvier 2015
+Dernière modification: 28 janvier 2015
+Description:
+	Fichier contenant l'implémentation de la classe Ecole.
+********************************************************************/
+
 #include "Ecole.h"
 #include "Section.h"
 #include "Professeur.h"
