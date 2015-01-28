@@ -52,10 +52,10 @@ bool Ecole::ajouterSection(Section* section){
 	bool estPresente = false;
 	if (nombreSections_ < 50){
 		for (unsigned int i = 0; i < nombreSections_; i++){
-				if (sections_[i] == section)
-					estPresente = true;
+			if (sections_[i] == section)
+				estPresente = true;
 		}
-		if (estPresente){
+		if (estPresente == false){
 			sections_[nombreSections_] = section;
 			++nombreSections_;
 		}
@@ -86,7 +86,7 @@ bool Ecole::supprimerSection(const string& sigle, const string& local){ // En as
 void Ecole::afficher(){
 	cout << "Nom de l'ecole: " << nom_ << endl << "Adresse: " << adresse_ << endl << "Nombre de sections: " << nombreSections_ << endl;
 	for (unsigned int i = 0; i < nombreSections_; i++){
-		cout << "Section numero " << i << endl;
+		cout << "Section numero " << i + 1 << endl;
 		sections_[i]->afficher();
 	}
 }

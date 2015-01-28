@@ -19,10 +19,11 @@ Section::Section(){
 	nombreEtudiants_ = 0;
 }
 
-Section::Section(const string& sigleCours, const string& local, const string& titreCours, const Professeur& professeur){ //TODO: Vérifier const Etudiant etudiant
+Section::Section(const string& sigleCours, const string& local, const string& titreCours, Professeur& professeur){ //TODO: Vérifier const Etudiant etudiant
 	sigleCours_ = sigleCours;
 	local_ = local;
 	titreCours_ = titreCours;
+	professeur_ = &professeur;
 	for (int i = 0; i < MAXIMUM_SECTIONS; i++){
 		etudiant_[i] = new Etudiant;
 	}
@@ -88,8 +89,8 @@ bool Section::ajouterEtudiant(const Etudiant& etudiant){
 void Section::afficher(){
 	cout << "Sigle de cours: " << sigleCours_ << endl << "Local: " << local_ << endl << "Titre du cours: " << titreCours_ << endl;
 	professeur_->afficher();
-	for (int i = 0; i < MAXIMUM_SECTIONS; i++){
-		cout << "Etudiant numero " << i << endl;
+	for (unsigned int i = 0; i < nombreEtudiants_; i++){
+		cout << "Etudiant numero " << i + 1 << endl;
 		etudiant_[i]->afficher();
 	}
 	cout << "Nombre d'etudiants dans la section: " << nombreEtudiants_ << endl;

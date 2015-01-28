@@ -11,7 +11,7 @@ class Section
 {
 public:
 	Section();
-	Section(const string& sigleCours, const string& local, const string& titreCours, const Professeur& professeur);
+	Section(const string& sigleCours, const string& local, const string& titreCours, Professeur& professeur);
 	~Section();
 
 	string getSigleCours() const;

@@ -96,7 +96,7 @@ int main()
 	//		titre="Économie 101"
 	//		prof=p12 - Jean-Martin Aussant
 	Section ISF1000("ISF1000", "C215", "Economie 101", jeanMartin_Aussant);
-	//TODO: GOOD TILL HERE
+
 	// 11) Ajouter le deuxième étudiant au cours ISF1000.
 	ISF1000.ajouterEtudiant(kahina_Bechiri);
 
@@ -139,14 +139,14 @@ int main()
 
 	// 18) Ajouter le cours INF1010 et le cours LOG4420 à l'École Polytechnique.
 	cout << endl << "===============================================" << endl;
-	cout << "Ajout de la section INF1010 et LOG4420 à l'Ecole Polytechnique" << endl;
+	cout << "Ajout de la section INF1010 et LOG4420 a l'Ecole Polytechnique" << endl;
 	cout << "===============================================" << endl;
 	Poly.ajouterSection(&INF1010);
 	Poly.ajouterSection(LOG4420);
 
 	// 19) Ajouter le cours ISF1000 à l'UQAM.
 	cout << endl << "===============================================" << endl;
-	cout << "Ajout de la section ISF1000 à l'UQAM" << endl;
+	cout << "Ajout de la section ISF1000 a l'UQAM" << endl;
 	cout << "===============================================" << endl;
 	Uqam->ajouterSection(&ISF1000);
 
@@ -154,13 +154,13 @@ int main()
 	ISF2000->setLocal("A250");
 	// 21) Ajouter le cours ISF2000 à l'UQAM.
 	cout << endl << "===============================================" << endl;
-	cout << "Ajout de la section ISF2000 à l'UQAM" << endl;
+	cout << "Ajout de la section ISF2000 a l'UQAM" << endl;
 	cout << "===============================================" << endl;
 	Uqam->ajouterSection(ISF2000);
 
 	// 22) Supprimer le cours ISF2000 de l'UQAM
 	cout << endl << "===============================================" << endl;
-	cout << "On supprime la section ISF2000 à l'UQAM" << endl;
+	cout << "On supprime la section ISF2000 a l'UQAM" << endl;
 	cout << "===============================================" << endl;
 	Uqam->supprimerSection(ISF2000->getSigleCours(), ISF2000->getLocal());
 
