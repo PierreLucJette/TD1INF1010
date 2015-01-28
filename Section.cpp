@@ -14,7 +14,7 @@ Section::Section(){
 	titreCours_ = "";
 	professeur_ = NULL;
 	for (int i = 0; i < MAXIMUM_SECTIONS; i++){
-		etudiant_[i] = NULL;
+		etudiant_[i] = new Etudiant;
 	}
 	nombreEtudiants_ = 0;
 }
@@ -24,7 +24,7 @@ Section::Section(const string& sigleCours, const string& local, const string& ti
 	local_ = local;
 	titreCours_ = titreCours;
 	for (int i = 0; i < MAXIMUM_SECTIONS; i++){
-		etudiant_[i] = NULL;
+		etudiant_[i] = new Etudiant;
 	}
 	nombreEtudiants_ = 0; //La section est vide par défault
 }
@@ -77,7 +77,7 @@ bool Section::ajouterEtudiant(const Etudiant& etudiant){
 		if (etudiant_[i]->getMatricule() == etudiant.getMatricule())
 			dejaPresent = true;
 	}
-	if (nombreEtudiants_ < 75 && dejaPresent == false){
+	if (nombreEtudiants_ < MAXIMUM_SECTIONS && dejaPresent == false){
 		*etudiant_[nombreEtudiants_] = etudiant;
 		++nombreEtudiants_;
 		bienAjoute = true;

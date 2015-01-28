@@ -16,7 +16,7 @@ using namespace std;
 
 int main()
 {
-	cout << "\a\a\a\a\a\a\a";
+	cout << "\a\a";
 	
 	// 1) Créer automatiquement un objet Ecole avec son constructeur par défaut
 	//    et modifier ses attributs :
@@ -96,7 +96,7 @@ int main()
 	//		titre="Économie 101"
 	//		prof=p12 - Jean-Martin Aussant
 	Section ISF1000("ISF1000", "C215", "Economie 101", jeanMartin_Aussant);
-
+	//TODO: GOOD TILL HERE
 	// 11) Ajouter le deuxième étudiant au cours ISF1000.
 	ISF1000.ajouterEtudiant(kahina_Bechiri);
 
@@ -139,7 +139,7 @@ int main()
 
 	// 18) Ajouter le cours INF1010 et le cours LOG4420 à l'École Polytechnique.
 	cout << endl << "===============================================" << endl;
-	cout << "Ajout de la section INF1010 et LOG4420 à l'École Polytechnique" << endl;
+	cout << "Ajout de la section INF1010 et LOG4420 à l'Ecole Polytechnique" << endl;
 	cout << "===============================================" << endl;
 	Poly.ajouterSection(&INF1010);
 	Poly.ajouterSection(LOG4420);
