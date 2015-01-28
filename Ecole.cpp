@@ -12,14 +12,18 @@ Ecole::Ecole(){
 	nom_ = "";
 	adresse_ = "";
 	nombreSections_ = 0;
-	*sections_[MAX_SECTIONS] = {};
+	for (int i = 0; i < MAX_SECTIONS; i++){
+		sections_[i] = NULL;
+	}
 }
 
 Ecole::Ecole(const string& nom, const string& adresse){ //L'utilisateur n'a jamais accès aux sections et à leur nombre
 	nom_ = nom;
 	adresse_ = adresse;
 	nombreSections_ = 0;
-	*sections_[MAX_SECTIONS] = {};
+	for (int i = 0; i < MAX_SECTIONS; i++){
+		sections_[i] = NULL;
+	}
 }
 
 Ecole::~Ecole(){}

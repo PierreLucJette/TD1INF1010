@@ -16,7 +16,7 @@ using namespace std;
 
 int main()
 {
-	cout << endl;
+	cout << "\a\a\a\a\a\a\a";
 	
 	// 1) Créer automatiquement un objet Ecole avec son constructeur par défaut
 	//    et modifier ses attributs :
