@@ -26,14 +26,14 @@ public:
 	void setProfesseur(const Professeur& professeur);
 	void setNombreEtudiants(const unsigned int& nombreEtudiants);
 
-	bool ajouterEtudiant(Etudiant& etudiant);
+	bool ajouterEtudiant(const Etudiant& etudiant);
 
 	void afficher();
 
 private:
 	string sigleCours_, local_, titreCours_;
 	Professeur* professeur_;
-	Etudiant etudiant_[MAXIMUM_SECTIONS]; // Vérifier notation pointeurs des tableaux //TODO: On assume 75 étudiants max automatiquement?
+	Etudiant* etudiant_[MAXIMUM_SECTIONS]; // Vérifier notation pointeurs des tableaux //TODO: On assume 75 étudiants max automatiquement?
 	unsigned int nombreEtudiants_; //J'aurais écris nombreEtudiant_ par conventions, mais les instructions spécifient autrement
 };
 

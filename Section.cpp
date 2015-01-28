@@ -12,8 +12,10 @@ Section::Section(){
 	sigleCours_ = "";
 	local_ = "";
 	titreCours_ = "";
-	professeur_ = new Professeur();
-	etudiant_[MAXIMUM_SECTIONS] = {};
+	professeur_ = NULL;
+	for (int i = 0; i < MAXIMUM_SECTIONS; i++){
+		etudiant_[i] = NULL;
+	}
 	nombreEtudiants_ = 0;
 }
 
@@ -21,7 +23,9 @@ Section::Section(const string& sigleCours, const string& local, const string& ti
 	sigleCours_ = sigleCours;
 	local_ = local;
 	titreCours_ = titreCours;
-	etudiant_[MAXIMUM_SECTIONS] = {};
+	for (int i = 0; i < MAXIMUM_SECTIONS; i++){
+		etudiant_[i] = NULL;
+	}
 	nombreEtudiants_ = 0; //La section est vide par défault
 }
 
@@ -67,16 +71,18 @@ void Section::setNombreEtudiants(const unsigned int& nombreEtudiants){
 	nombreEtudiants_ = nombreEtudiants;
 }
 
-bool Section::ajouterEtudiant(Etudiant& etudiant){
-	bool bienAjoute = true, dejaPresent = false;
+bool Section::ajouterEtudiant(const Etudiant& etudiant){
+	bool bienAjoute = false , dejaPresent = false;
 	for (unsigned int i = 0; i < nombreEtudiants_; i++){
-		if (etudiant_[i].getMatricule() == etudiant.getMatricule())
+		if (etudiant_[i]->getMatricule() == etudiant.getMatricule())
 			dejaPresent = true;
 	}
-	if (nombreEtudiants_ < 75 && dejaPresent == false)
-	etudiant_[nombreEtudiants_] = etudiant;
-	++nombreEtudiants_;
-	return dejaPresent;
+	if (nombreEtudiants_ < 75 && dejaPresent == false){
+		*etudiant_[nombreEtudiants_] = etudiant;
+		++nombreEtudiants_;
+		bienAjoute = true;
+	}
+	return bienAjoute;
 }
 
 void Section::afficher(){
@@ -84,7 +90,7 @@ void Section::afficher(){
 	professeur_->afficher();
 	for (int i = 0; i < MAXIMUM_SECTIONS; i++){
 		cout << "Etudiant numero " << i << endl;
-		etudiant_[i].afficher();
+		etudiant_[i]->afficher();
 	}
 	cout << "Nombre d'etudiants dans la section: " << nombreEtudiants_ << endl;
 }
