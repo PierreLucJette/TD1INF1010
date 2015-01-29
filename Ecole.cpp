@@ -9,8 +9,6 @@ Description:
 
 #include "Ecole.h"
 #include "Section.h"
-#include "Professeur.h"
-#include "Etudiant.h"
 
 #include <iostream>
 #include <string>
@@ -36,7 +34,7 @@ Ecole::Ecole(const string& nom, const string& adresse){ //L'utilisateur n'a jama
 }
 
 Ecole::~Ecole(){
-	for (int i=0; i < nombreSections_; i++)
+	for (unsigned int i=0; i < nombreSections_; i++)
 		sections_[i]->~Section();
 }
 

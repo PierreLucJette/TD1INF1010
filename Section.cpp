@@ -7,7 +7,6 @@ Description:
 	Fichier contenant l'implémentation de la classe Section.
 ********************************************************************/
 
-#include "Ecole.h"
 #include "Section.h"
 #include "Professeur.h"
 #include "Etudiant.h"
@@ -33,6 +32,7 @@ Section::Section(const string& sigleCours, const string& local, const string& ti
 	local_ = local;
 	titreCours_ = titreCours;
 	professeur_ = &professeur;
+	etudiant_[MAXIMUM_SECTIONS] = new Etudiant;
 	for (int i = 0; i < MAXIMUM_SECTIONS; i++){
 		etudiant_[i] = new Etudiant;
 	}
@@ -41,7 +41,7 @@ Section::Section(const string& sigleCours, const string& local, const string& ti
 
 Section::~Section(){
 	professeur_->~Professeur();
-	for (int i = 0; i < nombreEtudiants_; i++)
+	for (unsigned int i = 0; i < nombreEtudiants_; i++)
 		etudiant_[i]->~Etudiant();
 }
 

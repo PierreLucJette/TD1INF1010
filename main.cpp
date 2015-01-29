@@ -173,7 +173,6 @@ int main()
 	Uqam->afficher();
 
 	// 24) Libérer la mémoire
-	//TODO: AUGMENTER LISIBILITÉ DE L'AFFICHAGE
 	Poly.~Ecole();
 	Uqam->~Ecole();
 	return 0;
