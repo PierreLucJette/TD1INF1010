@@ -21,9 +21,8 @@ Section::Section(){
 	local_ = "";
 	titreCours_ = "";
 	professeur_ = NULL;
-	for (int i = 0; i < MAXIMUM_SECTIONS; i++){
-		etudiant_[i] = new Etudiant;
-	}
+	for (int i = 0; i < MAXIMUM_SECTIONS; i++)
+		etudiant_[i] = NULL;
 	nombreEtudiants_ = 0;
 }
 
@@ -81,8 +80,11 @@ void Section::setProfesseur(const Professeur& professeur){
 	*professeur_ = professeur;
 }
 
-void Section::setNombreEtudiants(const unsigned int& nombreEtudiants){
-	nombreEtudiants_ = nombreEtudiants;
+void Section::setNombreEtudiants(const unsigned int& nombreEtudiants){ //On empêche un nombre d'étudiants négatif, ce qui ferait planter le programme
+	if (nombreEtudiants >= 0)
+		nombreEtudiants_ = nombreEtudiants;
+	else
+		cout << "Nombre d'etudiants inchange. Entrer un nombre >= a 0";		
 }
 
 bool Section::ajouterEtudiant(const Etudiant& etudiant){
@@ -106,5 +108,5 @@ void Section::afficher(){
 		cout << "Etudiant numero " << i + 1 << endl;
 		etudiant_[i]->afficher();
 	}
-	cout << "Nombre d'etudiants dans la section: " << nombreEtudiants_ << "\n\n\n";
+	cout << "Nombre d'etudiants dans la section: " << nombreEtudiants_ << endl << "-----------------------------------------------" << endl;
 }

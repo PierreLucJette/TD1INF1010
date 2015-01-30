@@ -63,5 +63,5 @@ void Professeur::setDepartement(const string& departement){
 }
 
 void Professeur::afficher(){
-	cout << "Numero d'employe: " << numeroEmploye_ << endl << "Prenom: " << prenom_ << endl << "Nom: " << nom_ << endl << "Departement: " << departement_ << "\n\n\n";
+	cout << "Numero d'employe: " << numeroEmploye_ << endl << "Prenom: " << prenom_ << endl << "Nom: " << nom_ << endl << "Departement: " << departement_ << endl;
 }

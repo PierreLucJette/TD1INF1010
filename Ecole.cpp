@@ -19,9 +19,9 @@ Ecole::Ecole(){
 	nom_ = "";
 	adresse_ = "";
 	nombreSections_ = 0;
-	for (int i = 0; i < MAX_SECTIONS; i++){
+	for (int i = 0; i < MAX_SECTIONS; i++)
 		sections_[i] = NULL;
-	}
+	
 }
 
 Ecole::Ecole(const string& nom, const string& adresse){ //L'utilisateur n'a jamais accès aux sections et à leur nombre
@@ -59,7 +59,7 @@ void Ecole::setAdresse(const string& adresse){
 }
 
 bool Ecole::ajouterSection(Section* section){
-	bool estPresente = false;
+	bool estPresente = false, aEteAjoutee = false;
 	if (nombreSections_ < MAX_SECTIONS){ // S'il reste de la place pour une nouvelle section dans l'école
 		for (unsigned int i = 0; i < nombreSections_; i++){
 			if ((sections_[i] == section) || sections_[i]->getLocal() == section->getLocal()) // Ici, l'utilisation de estPresente nous sauve l'utilisation d'une nouvelle variable, localEstOccupe.
@@ -69,13 +69,14 @@ bool Ecole::ajouterSection(Section* section){
 		if (estPresente == false){ //Si la section n'existe pas déjà et que le local est libre, on l'ajoute à la fin du tableau et on incrémente nombreSections_.
 			sections_[nombreSections_] = section;
 			++nombreSections_;
+			aEteAjoutee = true;
 		}
 	}
-	return estPresente;
+	return aEteAjoutee;
 }
 
 bool Ecole::supprimerSection(const string& sigle, const string& local){ // En assumant que la combinaison sigle/local est unique
-	bool estPresente = false;
+	bool estPresente = false, aEteSupprimee = false;
 	unsigned int marqueur = 0;
 	for (unsigned int i = 0; i < nombreSections_; i++){
 		if (sections_[i]->getSigleCours() == sigle && sections_[i]->getLocal() == local){ // Si on trouve que la section existe dans notre tableau (en comparant le sigle de cours et le local), on marque la position avec un marqueur et on efface le pointeur sur cette position
@@ -86,11 +87,12 @@ bool Ecole::supprimerSection(const string& sigle, const string& local){ // En as
 	}
 	if (estPresente){ // Si estPresente, on décale toutes les sections après notre marquer pour combler le trou et on décrémente le nombre de sections.
 		--nombreSections_;
+		aEteSupprimee = true;
 		for (unsigned int i = marqueur; i < nombreSections_; i++){
 			sections_[i] = sections_[i + 1];
 		}
 	}
-	return estPresente;
+	return aEteSupprimee;
 }
 
 void Ecole::afficher(){
@@ -99,7 +101,7 @@ void Ecole::afficher(){
 		cout << "Section numero " << i + 1 << endl;
 		sections_[i]->afficher();
 	}
-	cout << "\n\n\n===============================================\n\n\n";
+	cout << "\n===============================================\n";
 }
 
 
